@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo frond end</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="img/logo.png" alt="logotipo">
+        </a>
+    </header>
+    <nav class="navegacion">
+        <a class="navegacion__enlace" href="index.html">Inicio</a>
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+    </nav>
+    <main class="contenedor">
+        <h1>Producto</h1>
+        <div class="camisa">
+            <img class="camisa__imagen" src="img/3.jpg" alt="Imagen del producto">
+            <div class="camisa__contenido">
+                <p>Esto es un ejemplo de una tienda. Aqui puedes ver como se vería un producto de la misma, con el boton de compra, selección de talla y cantidad.</p>
+                <p class="camis__precio">Precio: 25 €</p>
+                <form class="formulario" action="">
+                    <select class="formulario__campo" name="" id="">
+                        <option value="" disabled selected> -- Seleccionar Talla -- </option>
+                        <option value=""> S </option>
+                        <option value=""> L </option>
+                        <option value=""> XL </option>
+                    </select>
+                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="0">
+                    <input class="formulario__submint" type="submit" value="Agregar al Carrito">
+                </form>
+            </div>
+
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer__texto"> © 2022. Todos los derechos reservados. Desarrollado por Fernando Valero el mejor del mundo entero.</p>
+    </footer>
+    
+</body>
+</html>

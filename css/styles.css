@@ -1,0 +1,231 @@
+:root{
+    --primario: #9C27B0;
+    --primarioOscuro: #891190;
+    --secundario: #FFCE00;
+    --secundarioOscuro: #e9bb02;
+    --blanco: #FFF;
+    --negro: #000;
+
+    --fuentePrincipal: 'Staatliches', cursive; 
+}
+
+/* Estandar para todas las webs */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Globales */
+body {
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1, h2, h3 {
+    text-align: center; /* Alinear el texto */
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.2rem;
+}
+h3 {
+    font-size: 2.4rem;    
+}
+
+/* Footer */
+footer {
+    background-color: var(--negro);
+    padding: 10px;
+}
+footer p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: center;
+}
+.header__logo {
+    margin: 3rem 0;
+}
+
+/* Navegación */
+.navegacion {
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Separación entre elemnetos de forma nueva */
+
+}
+.navegacion__enlace {
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 3rem;
+}
+.navegacion__enlace--activo, .navegacion__enlace:hover { /* Lo que hace hover es distingir cuando el ratón está en cima */
+    color: var(--secundario);
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Productos */
+.producto {
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+}
+
+/* Graficos */
+.grafico {
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / 3;
+}
+.grafico--camisas{
+    grid-row: 2 / 3;
+    background-image: url(../img/grafico1.jpg);
+}
+.grafico--node{
+    grid-row: 8 / 9;
+    background-image: url(../img/grafico2.jpg);
+}
+@media (min-width: 768px) {
+    .grafico--node{
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+}
+
+/* Nosotros */
+.nosotros {
+    display: grid;
+    padding: 2rem;
+}
+.nosotros__imagen {
+    grid-row: 1 / 2;
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .nosotros {
+        grid-template-columns: repeat(2,auto);
+        column-gap: 2rem;
+    }
+    .nosotros__imagen {
+        grid-column: 2 / 3;
+    }
+}
+@media (min-width: 1280px) {
+    .nosotros {
+        padding: 0;
+    }
+}
+
+/* Porqué comprarnos */
+/* Bloques */
+.bloques {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .bloques {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.bloque {
+    text-align: center;
+}
+.bloque__titulo {
+    margin: 0;
+}
+
+/* Página del producto */
+.camisa {
+    padding: 1rem;
+    margin-bottom: 5rem;
+
+}
+@media (min-width: 768px) {
+    .camisa {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+.camisa__imagen {
+    border-radius: 5%;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+}
+
+.formulario__submint {
+    background-color: var(--secundario);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    padding: 2rem;
+    transition: background-color 0.3s ease;
+    transition: font-size 0.3s ease;
+    grid-column: 1 / 3; /* Selecciona la columna del elemento y le dice que tiene que empezar en el 1 y terminar en el 3 */
+
+}
+.formulario__submint:hover {
+    cursor: pointer;
+    background-color: var(--secundarioOscuro);
+    font-size: 2.5rem;
+}
+.formulario__campo {
+    border-width: 1rem; /* Tamaño del borde */
+    border-style: solid; /* Tipo de borde */
+    border-color: var(--primarioOscuro); /* Color del borde */
+
+    border: 1rem solid var(--primarioOscuro);/* Con una estilo se puede cambiar todo, 1º ancho , 2º tipo, 3º color */
+
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-size: var(--fuentePrincipal);
+    padding: 1rem;
+    appearance: none;
+}
+
